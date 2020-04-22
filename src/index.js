@@ -1,14 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createBrowserHistory } from "history";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { Route, Switch, Router } from "react-router-dom";
+import ScrollToTop from "react-router-scroll-top";
+
+var hist = createBrowserHistory();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Router history={hist}>
+    <ScrollToTop>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route exact path="/posts" component={App} />
+        <Route exact path="/phillip" component={App} />
+        <Route exact path="/contact" component={App} />
+      </Switch>
+    </ScrollToTop>
+  </Router>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
