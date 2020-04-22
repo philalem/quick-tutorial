@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
 import "./index.css";
-import App from "./App";
+import PageLayout from "./PageLayout";
 import * as serviceWorker from "./serviceWorker";
 import { Route, Switch, Router } from "react-router-dom";
 import ScrollToTop from "react-router-scroll-top";
@@ -13,10 +13,10 @@ ReactDOM.render(
   <Router history={hist}>
     <ScrollToTop>
       <Switch>
-        <Route exact path="/" component={App} />
-        <Route exact path="/posts" component={App} />
-        <Route exact path="/phillip" component={App} />
-        <Route exact path="/contact" component={App} />
+        <Route exact path="/" component={PageLayout} />
+        <Route exact path="/posts" component={PageLayout} />
+        <Route exact path="/phillip" component={PageLayout} />
+        <Route exact path="/contact" component={PageLayout} />
       </Switch>
     </ScrollToTop>
   </Router>,
