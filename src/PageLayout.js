@@ -1,13 +1,14 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import { Paper, Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 import Favorite from "@material-ui/icons/Favorite";
+import MenuIcon from "@material-ui/icons/Menu";
+import React from "react";
+import FeedSection from "./FeedSection";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,9 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   footer: {
-    height: "100vh",
-    display: "flex",
-    marginTop: "20%",
+    marginTop: 100,
   },
 }));
 
@@ -51,27 +50,19 @@ export default function PageLayout() {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
+      <FeedSection />
       <Grid container className={classes.footer} justify="center" spacing={10}>
-        {[0, 1, 2].map((value) => (
-          <Grid key={value} item>
-            <Paper className={classes.paper} />
-          </Grid>
-        ))}
-        © {new Date().getFullYear()} The Everyday Developer
-        <p>
-          Crafted with
-          {` `}
-          <Favorite />
-          {` `}by
-          {` `}
+        <Typography>
+          © {new Date().getFullYear()} Quick Tutorial Crafted with <Favorite />{" "}
+          by{" "}
           <a
             href="https://github.com/philalem"
             target="_blank"
             rel="noopener noreferrer"
           >
             Phillip
-          </a>{" "}
-        </p>
+          </a>
+        </Typography>
       </Grid>
     </div>
   );
