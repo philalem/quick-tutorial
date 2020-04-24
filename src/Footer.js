@@ -5,6 +5,7 @@ import Favorite from "@material-ui/icons/Favorite";
 const useStyles = makeStyles((theme) => ({
   footer: {
     marginTop: 100,
+    width: "100%",
   },
 }));
 
