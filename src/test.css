@@ -1,0 +1,17 @@
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+}
+
+.sidebar {
+  background-color: aqua;
+  height: 100vh;
+  flex-grow: 1;
+}
+
+.feed {
+  background-color: blue;
+  height: 100vh;
+  flex-grow: 3;
+}
