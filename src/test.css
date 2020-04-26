@@ -1,8 +1,14 @@
 .container {
   max-width: 800px;
-  display: flex;
   margin: auto;
   flex-direction: column;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
 }
 
 .sidebar {
@@ -24,5 +30,6 @@
 .row {
   background-color: blueviolet;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
 }
